@@ -1,0 +1,46 @@
+.root {
+  h2 {
+    text-align: left;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 90px;
+  }
+  .sliderBlock {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 124px;
+    .imageSection {
+      position: relative;
+      .leftArrow {
+        position: absolute;
+        right: 103%;
+        top: 50%;
+        cursor: pointer;
+      }
+      .rigthArrow {
+        position: absolute;
+        left: 103%;
+        top: 50%;
+        cursor: pointer;
+      }
+      .rectangleBlock {
+        display: flex;
+        width: 110px;
+        justify-content: space-between;
+        position: absolute;
+        top: 80%;
+        left: 41%;
+        .rectangle {
+          cursor: pointer;
+        }
+      }
+    }
+    .infoSection {
+      margin-top: 78px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 330px;
+    }
+  }
+}
