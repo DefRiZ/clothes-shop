@@ -1,0 +1,22 @@
+.root {
+  text-align: left;
+  h2 {
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 90px;
+  }
+  .benefitsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 75px;
+    .benefitsBlock {
+      h3 {
+        margin-top: 35px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}

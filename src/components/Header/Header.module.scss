@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  .mainNav {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    li {
+      font-size: 15px;
+      &:hover {
+        color: #6e9c9f;
+      }
+    }
+  }
+}
+
+.userMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .number {
+    margin-left: 10px;
+    margin-right: 67px;
+    font-size: 15px;
+  }
+}
