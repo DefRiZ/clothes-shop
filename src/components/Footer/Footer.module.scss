@@ -1,0 +1,54 @@
+.root {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-top: 100px;
+  .topSection {
+    display: flex;
+    justify-content: space-between;
+    nav {
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+      }
+    }
+    .contacts {
+      .phone {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    .license {
+      display: flex;
+      flex-direction: column;
+      span:first-of-type {
+        margin-top: 35px;
+      }
+      span {
+        margin-bottom: 6px;
+      }
+    }
+    .categories {
+      margin-right: 306px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    .links {
+      margin-top: 35px;
+      width: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cards {
+      margin-top: 30px;
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
