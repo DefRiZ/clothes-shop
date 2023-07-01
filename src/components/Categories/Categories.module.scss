@@ -1,0 +1,22 @@
+.root {
+  margin-bottom: 90px;
+  .categories {
+    display: flex;
+    width: 1050px;
+    justify-content: space-between;
+    .category {
+      display: inline-block;
+      cursor: pointer;
+      padding: 19px 65px;
+      border: 1px solid black;
+    }
+    .active {
+      background-color: black;
+      color: white;
+      display: inline-block;
+      cursor: pointer;
+      padding: 19px 65px;
+      border: 1px solid black;
+    }
+  }
+}
