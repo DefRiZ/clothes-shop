@@ -45,9 +45,9 @@ const Slider = () => {
               stroke="#858585"
             />
           </svg>
-          {currentSlide === 0 && <img src={firstSlide} />}
-          {currentSlide === 1 && <img src={secondSlide} />}
-          {currentSlide === 2 && <img src={thirdSlide} />}
+          {currentSlide === 0 && <img src={firstSlide} alt="first" />}
+          {currentSlide === 1 && <img src={secondSlide} alt="second" />}
+          {currentSlide === 2 && <img src={thirdSlide} alt="third" />}
           <svg
             onClick={() => goToNext()}
             className={styles.rigthArrow}
@@ -69,8 +69,10 @@ const Slider = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
               >
-                {currentSlide === index && <img src={activeRec} />}
-                {currentSlide !== index && <img src={rectangle} />}
+                {currentSlide === index && <img src={activeRec} alt="active" />}
+                {currentSlide !== index && (
+                  <img src={rectangle} alt="non-active" />
+                )}
               </div>
             ))}
           </div>
