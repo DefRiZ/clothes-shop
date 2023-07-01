@@ -1,0 +1,21 @@
+.root {
+  .title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 90px;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+  .button {
+    color: #6e9c9f;
+    display: inline-block;
+    padding: 22px 50px;
+    margin-top: 65px;
+    margin-bottom: 130px;
+    border: 1px solid #6e9c9f;
+  }
+}
