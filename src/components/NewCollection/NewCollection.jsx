@@ -12,7 +12,7 @@ const NewCollection = () => {
   React.useEffect(() => {
     dispatch(fetchCollection());
   }, [dispatch]);
-  const collectionList = collectionFetch.map((obj, i) => (
+  const collectionList = collectionFetch.map((obj) => (
     <SingleProduct key={obj.id} {...obj} />
   ));
   return (
