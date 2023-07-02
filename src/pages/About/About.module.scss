@@ -1,0 +1,52 @@
+.root {
+  .title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 25px;
+  }
+  .breads {
+    display: flex;
+    margin-bottom: 210px;
+    .bread {
+      &:first-of-type {
+        margin-right: 40px;
+      }
+    }
+  }
+  .upper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 94px;
+  }
+  .bottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 94px;
+  }
+  .text {
+    text-align: left;
+    h3 {
+      margin: 113px auto 46px auto;
+    }
+    p {
+      font-weight: 500;
+      &:first-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .button {
+    display: inline-block;
+    padding: 22px 50px;
+    border: 1px solid #6e9c9f;
+    background-color: #6e9c9f;
+    color: white;
+    margin: 130px auto;
+    &:hover {
+      background-color: #509498;
+      border: 1px solid #509498;
+    }
+  }
+}

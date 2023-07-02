@@ -1,6 +1,7 @@
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
+import About from "./pages/About/About";
 import Catalog from "./pages/Catalog/Catalog";
 import Main from "./pages/Main";
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
       <div className="Footer">
