@@ -5,15 +5,19 @@ import { fetchItems } from "../../store/slices/itemsSlice";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 import styles from "./Catalog.module.scss";
+import Pagination from "../../components/Pagination/Pagination";
 
 const Catalog = () => {
   const dispatch = useDispatch();
   const { status, itemsFetch } = useSelector((state) => state.items);
-  const { categoryId } = useSelector((state) => state.filter);
+  const { categoryId, currentPage } = useSelector((state) => state.filter);
+
   React.useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : "";
-    dispatch(fetchItems({ category }));
-  }, [dispatch, categoryId]);
+    dispatch(fetchItems({ category, currentPage }));
+    window.scrollTo(0, 0);
+  }, [categoryId, currentPage, dispatch]);
+
   const itemsList = itemsFetch.map((item) => (
     <SingleProduct key={item.id} {...item} />
   ));
@@ -31,6 +35,7 @@ const Catalog = () => {
         {status === "complete" && itemsList}
       </div>
       <p className={styles.list}>Показано 9 из 12 товаров</p>
+      <Pagination />
     </div>
   );
 };

@@ -4,9 +4,9 @@ import axios from "axios";
 
 export const fetchItems = createAsyncThunk(
   "items/fetchItems",
-  async ({ category }) => {
+  async ({ category, currentPage }) => {
     const { data } = await axios.get(
-      `https://63f6626c59c944921f73435d.mockapi.io/items?${category}`
+      `https://63f6626c59c944921f73435d.mockapi.io/items?${category}&page=${currentPage}&limit=9`
     );
     return data;
   }

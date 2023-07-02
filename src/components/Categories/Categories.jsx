@@ -12,7 +12,6 @@ const Categories = () => {
   const { categoryId } = useSelector((state) => state.filter);
 
   const onClickCategory = (i) => {
-    console.log(1);
     dispatch(setCategoryId(i));
   };
 
