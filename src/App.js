@@ -4,13 +4,17 @@ import Header from "./components/Header/Header";
 import Catalog from "./pages/Catalog/Catalog";
 import Main from "./pages/Main";
 
+import { Route, Routes } from "react-router";
+
 function App() {
   return (
     <div>
       <div className="App">
         <Header />
-        {/* <Main /> */}
-        <Catalog />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/catalog" element={<Catalog />} />
+        </Routes>
       </div>
       <div className="Footer">
         <Footer />

@@ -4,23 +4,26 @@ import logo from "../../img/logo.svg";
 import cart from "../../img/shop-bag.svg";
 
 import styles from "./Header.module.scss";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className={styles.root}>
       <div className={styles.logoDiv}>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
       <nav>
         <ul className={styles.mainNav}>
           <li>
-            <a>Главная</a>
+            <Link to="/">Главная</Link>
           </li>
           <li>
-            <a>Магазин</a>
+            <Link to="/catalog">Магазин</Link>
           </li>
           <li>
-            <a>О бренде</a>
+            <Link to="/about">О бренде</Link>
           </li>
           <li>
             <a>Контакты</a>
