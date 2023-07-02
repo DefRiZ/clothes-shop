@@ -1,0 +1,33 @@
+.container {
+  margin-bottom: 130px;
+  .root {
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      margin: 0px 7px;
+    }
+    a {
+      display: inline-block;
+      padding: 9px 16px;
+      border: 1px solid black;
+      cursor: pointer;
+      &:first-of-type,
+      &:last-of-type {
+        border: none;
+      }
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+  }
+
+  :global {
+    .selected {
+      background-color: black;
+      color: white;
+    }
+  }
+}
