@@ -7,6 +7,7 @@ import inst from "../../img/social/instagram.svg";
 import facebook from "../../img/social/facebook.svg";
 import twit from "../../img/social/twitter.svg";
 import cards from "../../img/social/visa-mastercard.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -18,13 +19,13 @@ const Footer = () => {
         <nav>
           <ul className={styles.nav}>
             <li>
-              <a>Главная</a>
+              <Link to="/">Главная</Link>
             </li>
             <li>
-              <a>Магазин</a>
+              <Link to="/catalog">Магазин</Link>
             </li>
             <li>
-              <a>О бренде</a>
+              <Link to="/about">О бренде</Link>
             </li>
             <li>
               <a>Контакты</a>
@@ -43,10 +44,18 @@ const Footer = () => {
           <span>Публичная оферта</span>
         </div>
         <ul className={styles.categories}>
-          <li>Пальто</li>
-          <li>Свитшоты</li>
-          <li>Кардиганы</li>
-          <li>Толстовки</li>
+          <li>
+            <Link to="/catalog">Пальто</Link>
+          </li>
+          <li>
+            <Link to="/catalog">Свитшоты</Link>
+          </li>
+          <li>
+            <Link to="/catalog">Кардиганы</Link>
+          </li>
+          <li>
+            <Link to="/catalog">Толстовки</Link>
+          </li>
         </ul>
         <div className={styles.social}>
           <div className={styles.links}>

@@ -12,6 +12,19 @@
     .bread {
       &:first-of-type {
         margin-right: 40px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+          content: "-";
+          position: absolute;
+          right: -41%;
+          bottom: -41%;
+          font-size: 30px;
+          cursor: default;
+        }
+      }
+      &:last-of-type {
+        color: #909090;
       }
     }
   }

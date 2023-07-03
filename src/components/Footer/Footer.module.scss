@@ -10,6 +10,10 @@
         display: flex;
         justify-content: space-between;
         width: 400px;
+        li:hover {
+          color: #6e9c9f;
+          cursor: pointer;
+        }
       }
     }
     .contacts {
@@ -30,12 +34,20 @@
       }
       span {
         margin-bottom: 6px;
+        &:hover {
+          color: #6e9c9f;
+          cursor: pointer;
+        }
       }
     }
     .categories {
       margin-right: 306px;
       li {
         margin-bottom: 10px;
+        &:hover {
+          color: #6e9c9f;
+          cursor: pointer;
+        }
       }
     }
     .links {

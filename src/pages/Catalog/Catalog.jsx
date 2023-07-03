@@ -6,6 +6,7 @@ import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 import styles from "./Catalog.module.scss";
 import Pagination from "../../components/Pagination/Pagination";
+import { Link } from "react-router-dom";
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,9 @@ const Catalog = () => {
     <div className={styles.root}>
       <h2 className={styles.title}>Магазин</h2>
       <ul className={styles.breads}>
-        <li className={styles.bread}>Главная</li>
+        <li className={styles.bread}>
+          <Link to="/">Главная</Link>
+        </li>
         <li className={styles.bread}>Магазин</li>
       </ul>
       <Categories />
