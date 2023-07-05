@@ -6,7 +6,11 @@ import cart from "../../img/shop-bag.svg";
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
 
+import { useDispatch } from "react-redux";
+import { setDrawer } from "../../store/slices/filterSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
   return (
     <div className={styles.root}>
       <div className={styles.logoDiv}>
@@ -33,6 +37,7 @@ const Header = () => {
       <div className={styles.userMenu}>
         <svg
           className={styles.phone}
+          onClick={() => dispatch(setDrawer())}
           width="17"
           height="17"
           viewBox="0 0 17 17"
@@ -59,8 +64,9 @@ const Header = () => {
             </clipPath>
           </defs>
         </svg>
-
-        <p className={styles.number}>+7 (495) 823-54-12</p>
+        <span className={styles.number}>
+          <a href="tel:+74958235412">+7 (495) 823-54-12</a>
+        </span>
         <img className={styles.cart} src={cart} alt="cart" />
       </div>
     </div>

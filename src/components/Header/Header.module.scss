@@ -26,4 +26,16 @@ nav {
     margin-right: 67px;
     font-size: 15px;
   }
+  .phone {
+    padding: 6px;
+    width: 27px;
+    height: 27px;
+    &:hover {
+      background-color: #6e9c9f;
+
+      & path {
+        fill: #ffffff;
+      }
+    }
+  }
 }
