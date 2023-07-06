@@ -8,7 +8,8 @@ import Main from "./pages/Main";
 
 import { Route, Routes } from "react-router";
 
-import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import SinglePage from "./components/SinglePage/SinglePage";
 
 function App() {
   const { isOpenDrawer } = useSelector((state) => state.filter);
@@ -20,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/items/:id" element={<SinglePage />} />
+          <Route path="/catalog/items/:id" element={<SinglePage />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
