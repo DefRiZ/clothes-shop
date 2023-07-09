@@ -1,0 +1,75 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  .info {
+    .title {
+      margin-top: 140px;
+      margin-bottom: 45px;
+      text-align: left;
+      font-weight: 400;
+      font-size: 35px;
+    }
+    .about {
+      margin-bottom: 50px;
+      width: 310px;
+      text-align: right;
+      font-size: 16px;
+    }
+    .buttonSection {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 120px;
+
+      .arrow {
+        padding: 20px 26px;
+        background-color: rgba($color: #6e9c9f, $alpha: 0.1);
+      }
+      .button {
+        color: white;
+        background-color: #6e9c9f;
+        display: inline-block;
+        padding: 20px 50px;
+        border: 1px solid #6e9c9f;
+      }
+    }
+    .rectangleBlock {
+      margin: 0 auto;
+      display: flex;
+      width: 110px;
+      justify-content: space-between;
+      margin-bottom: 190px;
+      .rectangle {
+        cursor: pointer;
+      }
+    }
+  }
+  .gallery {
+    position: relative;
+    img {
+      z-index: 1;
+      position: absolute;
+      &:first-of-type {
+        position: relative;
+      }
+      &:nth-of-type(2) {
+        top: 12%;
+        left: 68%;
+      }
+      &:last-of-type {
+        top: 46.4%;
+        right: 76%;
+      }
+    }
+    .bg {
+      position: absolute;
+      width: 116.9%;
+      height: 100%;
+      background-color: #f1eadc;
+      bottom: 15%;
+      left: 20%;
+      z-index: 0;
+    }
+  }
+}

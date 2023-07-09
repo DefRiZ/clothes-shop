@@ -51,7 +51,6 @@ const NewCollection = () => {
     <div className={styles.root}>
       <h2 className={styles.title}>Новая коллекция</h2>
       <div className={styles.items}>
-        {status === "loading" && <h3>HEEEEY!</h3>}
         {status === "error" && <h3>Обновите страницу!</h3>}
         {status === "complete" && collectionList}
       </div>
