@@ -19,8 +19,9 @@ const SinglePage = () => {
     sises: ["xs", "s"],
   });
   const { id } = useParams();
-  const { imageUrl, title, price, category, sises } = item;
-  const { status, itemsFetch } = useSelector((state) => state.items);
+  const { imageUrl, title, price, sises } = item;
+  const { itemsFetch } = useSelector((state) => state.items);
+  const { categoryId, currentPage } = useSelector((state) => state.filter);
 
   // React.useEffect(() => {
   //   async function fetchItem() {
@@ -36,6 +37,8 @@ const SinglePage = () => {
   //   fetchItem();
   // }, [id]);
   React.useEffect(() => {
+    const category = categoryId > 0 ? `category=${categoryId}` : "";
+    dispatch(fetchItems({ category, currentPage }));
     async function fetchItem() {
       try {
         const { data } = await axios.get(
@@ -47,11 +50,8 @@ const SinglePage = () => {
       }
     }
     fetchItem();
-  }, []);
-  React.useEffect(() => {
-    dispatch(fetchItems());
-  }, [dispatch]);
-  let itemsList = itemsFetch;
+    console.log(fetchItems());
+  }, [dispatch, id]);
 
   function getRandomElements(array, count = 3) {
     // Создаем новый массив для сохранения выбранных элементов
@@ -81,16 +81,7 @@ const SinglePage = () => {
     return result;
   }
 
-  const myNewArray = getRandomElements(itemsList);
-  console.log(myNewArray);
-
-  // let itemsList = itemsFetch;
-  // console.log(itemsList);
-  // console.log(itemsList);
-  // const good = itemsList[Math.floor(Math.random() * itemsList.length)];
-
-  // console.log(itemsList);
-  // console.log(good);
+  const recommendArray = getRandomElements(itemsFetch);
 
   return (
     <div className={styles.root}>
@@ -129,7 +120,7 @@ const SinglePage = () => {
       <div className={styles.similar}>
         <h2 className={styles.title}>Связанные товары</h2>
         <div className={styles.items}>
-          {myNewArray.map((el, i) => (
+          {recommendArray.map((el, i) => (
             <SingleProduct key={i} {...el} />
           ))}
         </div>
