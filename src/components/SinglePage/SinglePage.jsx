@@ -1,10 +1,11 @@
 import React from "react";
-
-import styles from "./SinglePage.module.scss";
-import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { fetchItems } from "../../store/slices/itemsSlice";
+
+import styles from "./SinglePage.module.scss";
+
 import SingleProduct from "../SingleProduct/SingleProduct";
 
 const SinglePage = () => {

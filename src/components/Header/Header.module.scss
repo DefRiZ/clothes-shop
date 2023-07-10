@@ -27,6 +27,9 @@ nav {
     margin-left: 10px;
     margin-right: 67px;
     font-size: 15px;
+    &:hover {
+      color: #6e9c9f;
+    }
   }
   .phone {
     padding: 6px;

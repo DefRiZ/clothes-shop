@@ -9,6 +9,16 @@
       cursor: pointer;
       padding: 19px 65px;
       border: 1px solid black;
+      &:hover {
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+      }
+      &:active {
+        background-color: black;
+        opacity: 0.8;
+        color: white;
+      }
     }
     .active {
       background-color: black;

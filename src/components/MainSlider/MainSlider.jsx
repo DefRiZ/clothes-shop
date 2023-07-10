@@ -1,13 +1,13 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import styles from "./MainSlider.module.scss";
 import main from "../../img/MainSlider/main.jpg";
 import second from "../../img/MainSlider/second.jpg";
 import third from "../../img/MainSlider/third.jpg";
 import activeRec from "../../img/MainSlider/active.svg";
 import rectangle from "../../img/slider/rectangle.svg";
-
-import { Link } from "react-router-dom";
 
 const textList = [
   {
@@ -26,14 +26,15 @@ const textList = [
 
 const MainSlider = () => {
   const [slide, setSlide] = React.useState(0);
+  const onClickScroll = () => {
+    window.scrollTo({
+      top: 940,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className={styles.root}>
       <div className={styles.info}>
-        {/* <h2 className={styles.title}>Новые поступления в этом сезоне</h2>
-        <p className={styles.about}>
-          Утонченные сочетания и бархатные оттенки - вот то, что вы искали в
-          этом сезоне. Время исследовать.
-        </p> */}
         {slide === 0 && (
           <h2 className={styles.title}>{textList[slide].title}</h2>
         )}
@@ -47,7 +48,7 @@ const MainSlider = () => {
         )}
         {slide === 2 && <p className={styles.about}>{textList[slide].text}</p>}
         <div className={styles.buttonSection}>
-          <button className={styles.arrow}>
+          <button onClick={() => onClickScroll()} className={styles.arrow}>
             <svg
               width="16"
               height="29"
@@ -61,9 +62,9 @@ const MainSlider = () => {
               />
             </svg>
           </button>
-          <button className={styles.button}>
-            <Link to="/catalog">Открыть магазин</Link>
-          </button>
+          <Link to="/catalog" className={styles.button}>
+            <button>Открыть магазин</button>
+          </Link>
         </div>
         <div className={styles.rectangleBlock}>
           {textList.map((_, index) => (

@@ -1,12 +1,13 @@
 import React from "react";
-import Categories from "../../components/Categories/Categories";
+import { Link } from "react-router-dom";
+
 import { useSelector, useDispatch } from "react-redux";
 import { fetchItems } from "../../store/slices/itemsSlice";
-import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 import styles from "./Catalog.module.scss";
 import Pagination from "../../components/Pagination/Pagination";
-import { Link } from "react-router-dom";
+import Categories from "../../components/Categories/Categories";
+import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 const Catalog = () => {
   const dispatch = useDispatch();

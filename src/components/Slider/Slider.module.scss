@@ -42,6 +42,12 @@
       flex-direction: column;
       justify-content: space-evenly;
       height: 330px;
+      span {
+        font-size: 18px;
+        &:hover {
+          color: #6e9c9f;
+        }
+      }
     }
   }
 }

@@ -1,11 +1,9 @@
 import React from "react";
-
 import ReactPaginate from "react-paginate";
-
-import styles from "./Pagination.module.scss";
-
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentPage } from "../../store/slices/filterSlice";
+
+import styles from "./Pagination.module.scss";
 
 const Pagination = () => {
   const dispatch = useDispatch();

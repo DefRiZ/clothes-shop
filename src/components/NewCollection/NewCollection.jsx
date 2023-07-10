@@ -1,10 +1,11 @@
 import React from "react";
-
-import styles from "./NewCollection.module.scss";
-
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchItems } from "../../store/slices/itemsSlice";
+
 import SingleProduct from "../SingleProduct/SingleProduct";
+
+import styles from "./NewCollection.module.scss";
 
 const NewCollection = () => {
   const dispatch = useDispatch();
@@ -55,9 +56,9 @@ const NewCollection = () => {
         {status === "complete" && collectionList}
       </div>
 
-      <a className={styles.button} href="#">
+      <Link className={styles.button} to="/catalog">
         Открыть магазин
-      </a>
+      </Link>
     </div>
   );
 };

@@ -1,9 +1,10 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 import firstSlide from "../../img/slider/1-slide.jpg";
 import secondSlide from "../../img/slider/2-slide.jpg";
 import thirdSlide from "../../img/slider/3-slide.jpg";
-
 import activeRec from "../../img/slider/active-rectangle.svg";
 import rectangle from "../../img/slider/rectangle.svg";
 
@@ -86,7 +87,9 @@ const Slider = () => {
             Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно
             подчеркивают достоинства каждой девушки.
           </p>
-          <span>Подробнее о бренде</span>
+          <Link to="/about">
+            <span>Подробнее о бренде</span>
+          </Link>
         </div>
       </div>
     </section>

@@ -19,19 +19,32 @@
     .buttonSection {
       display: flex;
       justify-content: center;
+
       margin-top: 50px;
       margin-bottom: 120px;
 
       .arrow {
         padding: 20px 26px;
         background-color: rgba($color: #6e9c9f, $alpha: 0.1);
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          opacity: 0.5;
+        }
       }
       .button {
+        display: flex;
         color: white;
         background-color: #6e9c9f;
-        display: inline-block;
         padding: 20px 50px;
         border: 1px solid #6e9c9f;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          opacity: 0.5;
+        }
       }
     }
     .rectangleBlock {
