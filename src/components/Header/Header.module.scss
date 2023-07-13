@@ -43,4 +43,21 @@ nav {
       }
     }
   }
+  .cartBlock {
+    display: flex;
+    position: relative;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 18px;
+      color: white;
+      background-color: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+    }
+  }
 }

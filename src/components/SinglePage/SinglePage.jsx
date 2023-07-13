@@ -1,15 +1,29 @@
 import React from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { fetchItems } from "../../store/slices/itemsSlice";
 
 import styles from "./SinglePage.module.scss";
 
 import SingleProduct from "../SingleProduct/SingleProduct";
 
+import axios from "axios";
+
+import { Link, useParams } from "react-router-dom";
+
+import { useDispatch, useSelector } from "react-redux";
+import { fetchItems } from "../../store/slices/itemsSlice";
+import { addItem } from "../../store/slices/cartSlice";
+
 const SinglePage = () => {
   const dispatch = useDispatch();
+
+  const onClickAdd = () => {
+    const item = {
+      id,
+      imageUrl,
+      title,
+      price,
+    };
+    dispatch(addItem(item));
+  };
 
   const [item, setItem] = React.useState({
     id: "0",
@@ -22,21 +36,11 @@ const SinglePage = () => {
   const { id } = useParams();
   const { imageUrl, title, price, sises } = item;
   const { itemsFetch } = useSelector((state) => state.items);
+  const { cart } = useSelector((state) => state.cart);
+  const findItem = cart.find((obj) => obj.id === id);
+  const countItem = findItem ? findItem.count : 0;
   const { categoryId, currentPage } = useSelector((state) => state.filter);
 
-  // React.useEffect(() => {
-  //   async function fetchItem() {
-  //     try {
-  //       const { data } = await axios.get(
-  //         `https://63f6626c59c944921f73435d.mockapi.io/items${id}`
-  //       );
-  //       setItem(data);
-  //     } catch (error) {
-  //       alert("Error");
-  //     }
-  //   }
-  //   fetchItem();
-  // }, [id]);
   React.useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : "";
     dispatch(fetchItems({ category, currentPage }));
@@ -113,8 +117,10 @@ const SinglePage = () => {
             </ul>
           </div>
           <div className={styles.order}>
-            <span className={styles.count}>0</span>
-            <button className={styles.button}>Добавить в корзину</button>
+            <span className={styles.count}>{countItem}</span>
+            <button onClick={() => onClickAdd()} className={styles.button}>
+              Добавить в корзину
+            </button>
           </div>
         </div>
       </div>
