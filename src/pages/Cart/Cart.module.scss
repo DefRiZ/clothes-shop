@@ -1,0 +1,59 @@
+.root {
+  .title {
+    text-align: left;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 25px;
+  }
+  .breads {
+    display: flex;
+    margin-bottom: 210px;
+    .bread {
+      &:first-of-type {
+        margin-right: 40px;
+        cursor: pointer;
+        position: relative;
+        &::after {
+          content: "-";
+          position: absolute;
+          right: -41%;
+          bottom: -41%;
+          font-size: 30px;
+          cursor: default;
+        }
+      }
+      &:last-of-type {
+        color: #909090;
+      }
+    }
+  }
+  .info {
+    border-bottom: 1px solid #cccccc;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    h3 {
+      font-size: 15px;
+      text-align: left;
+    }
+  }
+  .order {
+    display: flex;
+    justify-content: flex-end;
+    margin: 140px 0 170px 0;
+    p {
+      padding: 17px 32px;
+      background-color: #f1eadc;
+      margin-right: 15px;
+      span {
+        margin-left: 70px;
+      }
+    }
+    .button {
+      padding: 22px 50px;
+      color: white;
+      background-color: #6e9c9f;
+      cursor: pointer;
+    }
+  }
+}

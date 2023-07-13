@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setDrawer } from "../../store/slices/filterSlice";
 
 import logo from "../../img/logo.svg";
@@ -10,6 +10,7 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const { totalCount } = useSelector((state) => state.cart);
   return (
     <div className={styles.root}>
       <div className={styles.logoDiv}>
@@ -66,7 +67,10 @@ const Header = () => {
         <span className={styles.number}>
           <a href="tel:+74958235412">+7 (495) 823-54-12</a>
         </span>
-        <img className={styles.cart} src={cart} alt="cart" />
+        <Link className={styles.cartBlock} to="/cart">
+          <img className={styles.cart} src={cart} alt="cart" />
+          <span>{totalCount > 0 && totalCount}</span>
+        </Link>
       </div>
     </div>
   );

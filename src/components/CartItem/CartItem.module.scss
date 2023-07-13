@@ -1,0 +1,27 @@
+.root {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  align-items: center;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  .info {
+    display: flex;
+    align-items: center;
+    .image {
+      max-width: 137px;
+      max-height: 170px;
+      margin: auto 36px;
+    }
+    .delete {
+      cursor: pointer;
+    }
+  }
+  .count {
+    width: 50px;
+    padding: 10px 20px;
+    border: 1px solid #afafaf;
+  }
+}
