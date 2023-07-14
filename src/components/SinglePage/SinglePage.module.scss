@@ -58,6 +58,14 @@
           display: flex;
           width: 261px;
           justify-content: space-between;
+          .active {
+            background-color: black;
+            color: white;
+            padding: 8px 15px;
+            border: 2px solid black;
+            font-weight: 600;
+            cursor: pointer;
+          }
           .size {
             padding: 8px 15px;
             border: 2px solid black;

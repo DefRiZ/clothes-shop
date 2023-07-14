@@ -69,7 +69,7 @@ const Header = () => {
         </span>
         <Link className={styles.cartBlock} to="/cart">
           <img className={styles.cart} src={cart} alt="cart" />
-          <span>{totalCount > 0 && totalCount}</span>
+          <span>{totalCount}</span>
         </Link>
       </div>
     </div>

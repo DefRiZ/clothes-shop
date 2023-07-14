@@ -37,6 +37,20 @@
       text-align: left;
     }
   }
+  .empty {
+    .title {
+      text-align: center;
+    }
+    .block {
+      margin: 100px auto 170px auto;
+      .button {
+        padding: 22px 50px;
+        color: white;
+        background-color: #6e9c9f;
+        cursor: pointer;
+      }
+    }
+  }
   .order {
     display: flex;
     justify-content: flex-end;

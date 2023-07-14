@@ -15,6 +15,8 @@ import { addItem } from "../../store/slices/cartSlice";
 const SinglePage = () => {
   const dispatch = useDispatch();
 
+  const [size, setSize] = React.useState(0);
+
   const onClickAdd = () => {
     const item = {
       id,
@@ -110,7 +112,11 @@ const SinglePage = () => {
             <p>Выберите размер</p>
             <ul className={styles.sizes}>
               {sises.map((el, i) => (
-                <li className={styles.size} key={i}>
+                <li
+                  className={size === i ? `${styles.active}` : `${styles.size}`}
+                  key={i}
+                  onClick={() => setSize(i)}
+                >
                   {el}
                 </li>
               ))}

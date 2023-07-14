@@ -7,7 +7,30 @@ import styles from "./Cart.module.scss";
 import CartItem from "../../components/CartItem/CartItem";
 
 const Cart = () => {
-  const { cart, totalPrice } = useSelector((state) => state.cart);
+  const { cart, totalPrice, totalCount } = useSelector((state) => state.cart);
+
+  if (!totalCount) {
+    return (
+      <div className={styles.root}>
+        <h2 className={styles.title}>Корзина</h2>
+        <ul className={styles.breads}>
+          <li className={styles.bread}>
+            <Link to="/">Главная</Link>
+          </li>
+          <li className={styles.bread}>Корзина</li>
+        </ul>
+        <div className={styles.empty}>
+          <h3 className={styles.title}>У вас нет добавленных товаров</h3>
+          <div className={styles.block}>
+            <Link className={styles.button} to="/catalog">
+              Вернуться в магазин
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.root}>
       <h2 className={styles.title}>Корзина</h2>
@@ -17,7 +40,6 @@ const Cart = () => {
         </li>
         <li className={styles.bread}>Корзина</li>
       </ul>
-
       <div className={styles.info}>
         <h3>Товар</h3>
         <h3>Цена</h3>
