@@ -3,6 +3,9 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
 }
 
 nav {

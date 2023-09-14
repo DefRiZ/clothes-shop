@@ -12,7 +12,9 @@ const Benefits = () => {
       <h2>Что для нас важно</h2>
       <div className={styles.benefitsList}>
         <div className={styles.benefitsBlock}>
-          <img src={quality} alt="quality" />
+          <div className={styles.imgBlock}>
+            <img src={quality} alt="quality" />
+          </div>
           <h3>Качество</h3>
           <p>
             Наши профессионалы работают на лучшем оборудовании для пошива одежды
@@ -20,7 +22,9 @@ const Benefits = () => {
           </p>
         </div>
         <div className={styles.benefitsBlock}>
-          <img src={speed} alt="speed" />
+          <div className={styles.imgBlock}>
+            <img src={speed} alt="speed" />
+          </div>
           <h3>Скорость</h3>
           <p>
             Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти
@@ -28,7 +32,9 @@ const Benefits = () => {
           </p>
         </div>
         <div className={styles.benefitsBlock}>
-          <img src={responsibility} alt="responsibility" />
+          <div className={styles.imgBlock}>
+            <img src={responsibility} alt="responsibility" />
+          </div>
           <h3>Ответственность</h3>
           <p>
             Мы заботимся о людях и планете. Безотходное производство и
