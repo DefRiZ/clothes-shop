@@ -9,20 +9,33 @@
   .sliderBlock {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 1126px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     grid-column-gap: 124px;
     .imageSection {
       position: relative;
+      img {
+        max-width: 100%;
+      }
+
       .leftArrow {
         position: absolute;
         right: 103%;
         top: 50%;
         cursor: pointer;
+        @media (max-width: 1140x) {
+          display: none;
+        }
       }
       .rigthArrow {
         position: absolute;
         left: 103%;
         top: 50%;
         cursor: pointer;
+        @media (max-width: 1140x) {
+          display: none;
+        }
       }
       .rectangleBlock {
         display: flex;
@@ -42,6 +55,12 @@
       flex-direction: column;
       justify-content: space-evenly;
       height: 330px;
+      p {
+        @media (max-width: 1126px) {
+          max-width: 500px;
+          margin: 0 auto;
+        }
+      }
       span {
         font-size: 18px;
         &:hover {

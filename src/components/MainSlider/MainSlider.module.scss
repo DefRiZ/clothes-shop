@@ -2,26 +2,43 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 40px;
+  @media (max-width: 1140px) {
+    grid-template-columns: 1fr;
+  }
   .info {
+    @media (max-width: 960px) {
+      padding-left: 20px;
+    }
     .title {
       margin-top: 140px;
       margin-bottom: 45px;
       text-align: left;
       font-weight: 400;
       font-size: 35px;
+      @media (max-width: 1140px) {
+        text-align: center;
+      }
     }
     .about {
       margin-bottom: 50px;
       width: 310px;
       text-align: right;
       font-size: 16px;
+      @media (max-width: 1140px) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
     }
     .buttonSection {
       display: flex;
       justify-content: center;
-
       margin-top: 50px;
       margin-bottom: 120px;
+      @media (max-width: 1140px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
       .arrow {
         padding: 20px 26px;
@@ -60,27 +77,32 @@
   }
   .gallery {
     position: relative;
+    @media (max-width: 1140px) {
+      display: none;
+    }
     img {
+      max-width: 100%;
       z-index: 1;
       position: absolute;
+      box-sizing: content-box;
       &:first-of-type {
         position: relative;
       }
       &:nth-of-type(2) {
-        top: 12%;
-        left: 68%;
+        top: 15%;
+        left: 67%;
       }
       &:last-of-type {
-        top: 46.4%;
-        right: 76%;
+        top: 50%;
+        right: 70%;
       }
     }
     .bg {
       position: absolute;
-      width: 116.9%;
-      height: 100%;
+      width: 42.2vw;
+      height: 107.5vh;
       background-color: #f1eadc;
-      bottom: 15%;
+      top: -15%;
       left: 20%;
       z-index: 0;
     }

@@ -1,4 +1,13 @@
 .root {
+  img {
+    max-width: 100%;
+    @media (max-width: 1100px) {
+      margin: 0 auto;
+      &:last-of-type {
+        margin-top: 50px;
+      }
+    }
+  }
   .title {
     text-align: left;
     font-weight: 500;
@@ -32,14 +41,25 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: 94px;
+    @media (max-width: 1100px) {
+      justify-content: flex-start;
+      grid-template-columns: 1fr;
+    }
   }
   .bottom {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-column-gap: 94px;
+    @media (max-width: 1100px) {
+      justify-content: flex-start;
+      grid-template-columns: 1fr;
+    }
   }
   .text {
     text-align: left;
+    @media (max-width: 1100px) {
+      text-align: center;
+    }
     h3 {
       margin: 113px auto 46px auto;
     }

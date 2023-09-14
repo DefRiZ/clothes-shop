@@ -83,7 +83,7 @@ const MainSlider = () => {
         <img src={main} alt="main" />
         <img src={second} alt="second" />
         <img src={third} alt="third" />
-        <div className={styles.bg}></div>
+        {/* <div className={styles.bg}></div> */}
       </div>
     </div>
   );

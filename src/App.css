@@ -4,10 +4,15 @@
   max-width: 1110px;
   margin: 0 auto;
   margin-top: 50px;
+  @media (max-width: 1126px) {
+    padding: 0 20px;
+  }
 }
 
 .Footer {
   background-color: #f1eadc;
+  max-width: 100vw;
+  margin: 0 auto;
 }
 
 * {

@@ -12,59 +12,61 @@ import cards from "../../img/social/visa-mastercard.png";
 const Footer = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.topSection}>
-        <div className={styles.logoSection}>
-          <img src={logo} alt="logo" />
+      <div className={styles.wrap}>
+        <div className={styles.topSection}>
+          <div className={styles.logoSection}>
+            <img src={logo} alt="logo" />
+          </div>
+          <nav>
+            <ul className={styles.nav}>
+              <li>
+                <Link to="/">Главная</Link>
+              </li>
+              <li>
+                <Link to="/catalog">Магазин</Link>
+              </li>
+              <li>
+                <Link to="/about">О бренде</Link>
+              </li>
+              <li>
+                <Link to="#">Контакты</Link>
+              </li>
+            </ul>
+          </nav>
+          <div className={styles.contacts}>
+            <p className={styles.phone}>+7 (495) 823-54-12</p>
+            <p className={styles.mail}>hello@womazing.com</p>
+          </div>
         </div>
-        <nav>
-          <ul className={styles.nav}>
+        <div className={styles.bottomSection}>
+          <div className={styles.license}>
+            <span>© Все права защищены</span>
+            <span>Политика конфиденциальности</span>
+            <span>Публичная оферта</span>
+          </div>
+          <ul className={styles.categories}>
             <li>
-              <Link to="/">Главная</Link>
+              <Link to="/catalog">Пальто</Link>
             </li>
             <li>
-              <Link to="/catalog">Магазин</Link>
+              <Link to="/catalog">Свитшоты</Link>
             </li>
             <li>
-              <Link to="/about">О бренде</Link>
+              <Link to="/catalog">Кардиганы</Link>
             </li>
             <li>
-              <a>Контакты</a>
+              <Link to="/catalog">Толстовки</Link>
             </li>
           </ul>
-        </nav>
-        <div className={styles.contacts}>
-          <p className={styles.phone}>+7 (495) 823-54-12</p>
-          <p className={styles.mail}>hello@womazing.com</p>
-        </div>
-      </div>
-      <div className={styles.bottomSection}>
-        <div className={styles.license}>
-          <span>© Все права защищены</span>
-          <span>Политика конфиденциальности</span>
-          <span>Публичная оферта</span>
-        </div>
-        <ul className={styles.categories}>
-          <li>
-            <Link to="/catalog">Пальто</Link>
-          </li>
-          <li>
-            <Link to="/catalog">Свитшоты</Link>
-          </li>
-          <li>
-            <Link to="/catalog">Кардиганы</Link>
-          </li>
-          <li>
-            <Link to="/catalog">Толстовки</Link>
-          </li>
-        </ul>
-        <div className={styles.social}>
-          <div className={styles.links}>
-            <img src={inst} alt="insta" />
-            <img src={facebook} alt="facebook" />
-            <img src={twit} alt="twit" />
-          </div>
-          <div className={styles.cards}>
-            <img src={cards} alt="cards" />
+          <div className={styles.social}>
+            <div className={styles.links}>
+              <img src={inst} alt="insta" />
+              <img src={facebook} alt="facebook" />
+              <img src={twit} alt="twit" />
+            </div>
+            <div className={styles.cards}>
+              <img src={cards} alt="cards" />
+            </div>
           </div>
         </div>
       </div>

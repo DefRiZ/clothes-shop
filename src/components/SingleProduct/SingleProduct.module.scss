@@ -16,6 +16,9 @@
   background: #6e9c9f;
   opacity: 1;
   max-height: 478px;
+  @media (max-width: 1138px) {
+    background: none;
+  }
   &:hover .image {
     opacity: 0.1;
   }
