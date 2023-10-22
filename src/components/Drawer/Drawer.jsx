@@ -1,8 +1,9 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setDrawer } from "../../store/slices/filterSlice";
 
 import styles from "./Drawer.module.scss";
+
+import { useDispatch } from "react-redux";
+import { setDrawer } from "../../store/slices/filterSlice";
 
 const Drawer = () => {
   const dispatch = useDispatch();

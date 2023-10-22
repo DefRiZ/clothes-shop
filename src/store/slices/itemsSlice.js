@@ -6,8 +6,9 @@ export const fetchItems = createAsyncThunk(
   "items/fetchItems",
   async ({ category, currentPage }) => {
     const { data } = await axios.get(
-      `https://63f6626c59c944921f73435d.mockapi.io/items?${category}&page=${currentPage}&limit=9`
+      `https://63f6626c59c944921f73435d.mockapi.io/items?${category}&page=${currentPage}&limit=3`
     );
+
     return data;
   }
 );
@@ -33,5 +34,4 @@ const itemsSlice = createSlice({
   },
 });
 
-export const { status } = itemsSlice.actions;
 export default itemsSlice.reducer;

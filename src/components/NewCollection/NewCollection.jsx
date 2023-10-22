@@ -1,22 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchItems } from "../../store/slices/itemsSlice";
+
+import styles from "./NewCollection.module.scss";
 
 import SingleProduct from "../SingleProduct/SingleProduct";
 
-import styles from "./NewCollection.module.scss";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchItems } from "../../store/slices/itemsSlice";
 
 const NewCollection = () => {
   const dispatch = useDispatch();
   const { itemsFetch, status } = useSelector((state) => state.items);
   const { categoryId, currentPage } = useSelector((state) => state.filter);
 
-  // const { collectionFetch, status } = useSelector((state) => state.collection);
   React.useEffect(() => {
     const category = categoryId > 0 ? `category=${categoryId}` : "";
     dispatch(fetchItems({ category, currentPage }));
-  }, [dispatch]);
+  }, [dispatch, categoryId, currentPage]);
+
   function getRandomElements(array, count = 3) {
     // Создаем новый массив для сохранения выбранных элементов
     let result = [];

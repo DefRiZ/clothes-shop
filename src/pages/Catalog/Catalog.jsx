@@ -1,15 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import { useSelector, useDispatch } from "react-redux";
-import { fetchItems } from "../../store/slices/itemsSlice";
 
 import styles from "./Catalog.module.scss";
+import axios from "axios";
+
 import Pagination from "../../components/Pagination/Pagination";
 import Categories from "../../components/Categories/Categories";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchItems } from "../../store/slices/itemsSlice";
+
 const Catalog = () => {
+  const [data, setData] = React.useState([]);
   const dispatch = useDispatch();
   const { status, itemsFetch } = useSelector((state) => state.items);
   const { categoryId, currentPage } = useSelector((state) => state.filter);
@@ -19,6 +22,19 @@ const Catalog = () => {
     dispatch(fetchItems({ category, currentPage }));
     window.scrollTo(0, 0);
   }, [categoryId, currentPage, dispatch]);
+  React.useEffect(() => {
+    async function fetchItem() {
+      try {
+        const { data } = await axios.get(
+          "https://63f6626c59c944921f73435d.mockapi.io/items"
+        );
+        setData(data);
+      } catch (error) {
+        alert(`Error`);
+      }
+    }
+    fetchItem();
+  }, []);
 
   const itemsList = itemsFetch.map((item) => (
     <SingleProduct key={item.id} {...item} />
@@ -33,12 +49,16 @@ const Catalog = () => {
         <li className={styles.bread}>Магазин</li>
       </ul>
       <Categories />
-      <p className={styles.list}>Показано 9 из 12 товаров</p>
+      <p className={styles.list}>
+        Отображается {itemsFetch.length} из {data.length} товаров
+      </p>
       <div className={styles.items}>
         {status === "error" && <p>Обновите страницу</p>}
         {status === "complete" && itemsList}
       </div>
-      <p className={styles.list}>Показано 9 из 12 товаров</p>
+      <p className={styles.list}>
+        Отображается {itemsFetch.length} из {data.length} товаров
+      </p>
       <Pagination />
     </div>
   );

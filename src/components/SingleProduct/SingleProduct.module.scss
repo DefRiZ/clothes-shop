@@ -21,6 +21,8 @@
   }
   &:hover .image {
     opacity: 0.1;
+    transition-duration: 500ms;
+    scale: 1.01;
   }
   &:hover:before {
     content: "";

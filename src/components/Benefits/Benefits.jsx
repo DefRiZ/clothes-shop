@@ -1,10 +1,10 @@
 import React from "react";
 
+import styles from "./Benefits.module.scss";
+
 import quality from "../../img/quality.svg";
 import speed from "../../img/speed.svg";
 import responsibility from "../../img/hand.svg";
-
-import styles from "./Benefits.module.scss";
 
 const Benefits = () => {
   return (

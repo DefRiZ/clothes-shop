@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import { useSelector } from "react-redux";
 
 import styles from "./Cart.module.scss";
 import CartItem from "../../components/CartItem/CartItem";
+
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
   const { cart, totalPrice, totalCount } = useSelector((state) => state.cart);

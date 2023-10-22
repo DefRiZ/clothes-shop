@@ -2,9 +2,9 @@ import React from "react";
 
 import styles from "./SinglePage.module.scss";
 
-import SingleProduct from "../SingleProduct/SingleProduct";
-
 import axios from "axios";
+
+import SingleProduct from "../SingleProduct/SingleProduct";
 
 import { Link, useParams } from "react-router-dom";
 
@@ -57,8 +57,7 @@ const SinglePage = () => {
       }
     }
     fetchItem();
-    console.log(fetchItems());
-  }, [dispatch, id]);
+  }, [dispatch, id, categoryId, currentPage]);
 
   function getRandomElements(array, count = 3) {
     // Создаем новый массив для сохранения выбранных элементов

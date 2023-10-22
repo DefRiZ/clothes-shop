@@ -3,6 +3,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
+
   @media (max-width: 1024px) {
     padding: 0 40px;
   }
@@ -15,8 +16,10 @@ nav {
     justify-content: space-between;
     li {
       font-size: 15px;
+      transition-duration: 200ms;
       &:hover {
         color: #6e9c9f;
+        scale: 1.1;
       }
     }
   }
@@ -26,10 +29,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   .number {
     margin-left: 10px;
     margin-right: 67px;
     font-size: 15px;
+    transition-duration: 400ms;
     &:hover {
       color: #6e9c9f;
     }
@@ -38,8 +43,11 @@ nav {
     padding: 6px;
     width: 27px;
     height: 27px;
+    cursor: pointer;
+    transition-duration: 400ms;
     &:hover {
       background-color: #6e9c9f;
+      scale: 1.1;
 
       & path {
         fill: #ffffff;
@@ -49,6 +57,7 @@ nav {
   .cartBlock {
     display: flex;
     position: relative;
+    transition-duration: 400ms;
     span {
       display: flex;
       justify-content: center;
@@ -61,6 +70,12 @@ nav {
       position: absolute;
       top: 50%;
       left: 55%;
+    }
+    &:hover {
+      scale: 1.1;
+    }
+    &:active {
+      scale: 1.1;
     }
   }
 }

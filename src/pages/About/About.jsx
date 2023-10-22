@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import styles from "./About.module.scss";
 
 import img1 from "../../img/about/about1.jpg";
 import img2 from "../../img/about/about2.jpg";
+
+import { Link } from "react-router-dom";
 
 const About = () => {
   React.useEffect(() => {

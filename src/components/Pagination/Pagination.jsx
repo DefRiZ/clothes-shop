@@ -1,13 +1,35 @@
 import React from "react";
-import ReactPaginate from "react-paginate";
-import { useSelector, useDispatch } from "react-redux";
-import { setCurrentPage } from "../../store/slices/filterSlice";
 
 import styles from "./Pagination.module.scss";
 
+import ReactPaginate from "react-paginate";
+
+import axios from "axios";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setCurrentPage } from "../../store/slices/filterSlice";
+
 const Pagination = () => {
+  const [data, setData] = React.useState([]);
   const dispatch = useDispatch();
   const { currentPage } = useSelector((state) => state.filter);
+  React.useEffect(() => {
+    async function fetchItem() {
+      try {
+        const { data } = await axios.get(
+          "https://63f6626c59c944921f73435d.mockapi.io/items"
+        );
+        setData(data);
+      } catch (error) {
+        alert(`Error`);
+      }
+    }
+    fetchItem();
+  }, []);
+  const pageNumber = [];
+  for (let i = 0; i <= Math.ceil(data.length / 3); i++) {
+    pageNumber.push(i);
+  }
   return (
     <div className={styles.container}>
       <ReactPaginate

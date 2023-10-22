@@ -1,13 +1,14 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-
 import styles from "./MainSlider.module.scss";
+
 import main from "../../img/MainSlider/main.jpg";
 import second from "../../img/MainSlider/second.jpg";
 import third from "../../img/MainSlider/third.jpg";
 import activeRec from "../../img/MainSlider/active.svg";
 import rectangle from "../../img/slider/rectangle.svg";
+
+import { Link } from "react-router-dom";
 
 const textList = [
   {

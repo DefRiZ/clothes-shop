@@ -1,12 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { setDrawer } from "../../store/slices/filterSlice";
+
+import styles from "./Header.module.scss";
 
 import logo from "../../img/logo.svg";
 import cart from "../../img/shop-bag.svg";
 
-import styles from "./Header.module.scss";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setDrawer } from "../../store/slices/filterSlice";
 
 const Header = () => {
   const dispatch = useDispatch();

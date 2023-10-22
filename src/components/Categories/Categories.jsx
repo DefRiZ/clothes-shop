@@ -1,17 +1,26 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { setCategoryId } from "../../store/slices/filterSlice";
 
 import styles from "./Categories.module.scss";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setCategoryId } from "../../store/slices/filterSlice";
+import { useSearchParams } from "react-router-dom";
 
 const list = ["Все", "Пальто", "Свитшоты", "Кардиганы", "Толстовки"];
 
 const Categories = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const { categoryId } = useSelector((state) => state.filter);
 
-  const onClickCategory = (i) => {
+  React.useEffect(() => {
+    setSearchParams({ category: "Все" });
+  }, []);
+
+  const onClickCategory = (category, i) => {
     dispatch(setCategoryId(i));
+    const newSearchParams = { category: category };
+    setSearchParams(newSearchParams);
   };
 
   return (
@@ -23,7 +32,7 @@ const Categories = () => {
               categoryId === i ? `${styles.active}` : `${styles.category}`
             }
             key={i}
-            onClick={() => onClickCategory(i)}
+            onClick={() => onClickCategory(category, i)}
           >
             {category}
           </li>

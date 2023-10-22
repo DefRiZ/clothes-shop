@@ -33,5 +33,4 @@ const newCollectionSlice = createSlice({
   },
 });
 
-export const { status } = newCollectionSlice.actions;
 export default newCollectionSlice.reducer;

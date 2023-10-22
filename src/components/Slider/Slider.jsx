@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import styles from "./Slider.module.scss";
 
 import firstSlide from "../../img/slider/1-slide.jpg";
 import secondSlide from "../../img/slider/2-slide.jpg";
@@ -8,7 +8,7 @@ import thirdSlide from "../../img/slider/3-slide.jpg";
 import activeRec from "../../img/slider/active-rectangle.svg";
 import rectangle from "../../img/slider/rectangle.svg";
 
-import styles from "./Slider.module.scss";
+import { Link } from "react-router-dom";
 
 const slides = [firstSlide, secondSlide, thirdSlide];
 

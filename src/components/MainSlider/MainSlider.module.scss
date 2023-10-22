@@ -56,11 +56,13 @@
         background-color: #6e9c9f;
         padding: 20px 50px;
         border: 1px solid #6e9c9f;
+        transition-duration: 500ms;
         &:hover {
           opacity: 0.8;
         }
         &:active {
           opacity: 0.5;
+          scale: 1.02;
         }
       }
     }
