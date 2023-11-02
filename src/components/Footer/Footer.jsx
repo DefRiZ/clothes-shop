@@ -16,40 +16,52 @@ const Footer = () => {
       <div className={styles.wrap}>
         <div className={styles.topSection}>
           <div className={styles.logoSection}>
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <nav>
             <ul className={styles.nav}>
               <li>
-                <Link to="/">Главная</Link>
+                <Link to="/">Головна</Link>
               </li>
               <li>
                 <Link to="/catalog">Магазин</Link>
               </li>
               <li>
-                <Link to="/about">О бренде</Link>
+                <Link to="/about">Про бренд</Link>
               </li>
               <li>
-                <Link to="#">Контакты</Link>
+                <Link to="#">Контакти</Link>
               </li>
             </ul>
           </nav>
           <div className={styles.contacts}>
-            <p className={styles.phone}>+7 (495) 823-54-12</p>
-            <p className={styles.mail}>hello@womazing.com</p>
+            <a href="tel:+380000000000" className={styles.phone}>
+              +380000000000
+            </a>
+            <a href="*" className={styles.mail}>
+              hello@womazing.com
+            </a>
           </div>
         </div>
         <div className={styles.bottomSection}>
           <div className={styles.license}>
-            <span>© Все права защищены</span>
-            <span>Политика конфиденциальности</span>
-            <span>Публичная оферта</span>
+            <span>© Всі права захищені</span>
+            <span>Політика конфіденційності</span>
+            <span>Публічна оферта</span>
           </div>
           <div className={styles.social}>
             <div className={styles.links}>
-              <img src={inst} alt="insta" />
-              <img src={facebook} alt="facebook" />
-              <img src={twit} alt="twit" />
+              <a href="*">
+                <img src={inst} alt="insta" />
+              </a>
+              <a href="*">
+                <img src={facebook} alt="facebook" />
+              </a>
+              <a href="*">
+                <img src={twit} alt="twit" />
+              </a>
             </div>
             <div className={styles.cards}>
               <img src={cards} alt="cards" />

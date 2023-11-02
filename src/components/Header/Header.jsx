@@ -22,16 +22,16 @@ const Header = () => {
       <nav>
         <ul className={styles.mainNav}>
           <li>
-            <Link to="/">Главная</Link>
+            <Link to="/">Головна</Link>
           </li>
           <li>
             <Link to="/catalog">Магазин</Link>
           </li>
           <li>
-            <Link to="/about">О бренде</Link>
+            <Link to="/about">Про бренд</Link>
           </li>
           <li>
-            <Link to="/">Контакты</Link>
+            <Link to="/">Контакти</Link>
           </li>
         </ul>
       </nav>
@@ -66,7 +66,7 @@ const Header = () => {
           </defs>
         </svg>
         <span className={styles.number}>
-          <a href="tel:+74958235412">+7 (495) 823-54-12</a>
+          <a href="tel:+380000000000">+380000000000</a>
         </span>
         <Link className={styles.cartBlock} to="/cart">
           <img className={styles.cart} src={cart} alt="cart" />

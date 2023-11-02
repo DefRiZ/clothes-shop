@@ -42,9 +42,9 @@ const Cart = () => {
       </ul>
       <div className={styles.info}>
         <h3>Товар</h3>
-        <h3>Цена</h3>
-        <h3>Количество</h3>
-        <h3>Всего</h3>
+        <h3>Ціна</h3>
+        <h3>Кількість</h3>
+        <h3>Усього</h3>
       </div>
       <div className={styles.cart}>
         {cart.map((obj) => (
@@ -53,9 +53,9 @@ const Cart = () => {
       </div>
       <div className={styles.order}>
         <p>
-          Итого: <span>${totalPrice}</span>
+          Разом: <span>${totalPrice}</span>
         </p>
-        <button className={styles.button}>Оформить заказ</button>
+        <button className={styles.button}>Оформити замовлення</button>
       </div>
     </div>
   );

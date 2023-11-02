@@ -77,9 +77,11 @@
     background-color: #6e9c9f;
     color: white;
     margin: 130px auto;
+    transition-duration: 400ms;
     &:hover {
       background-color: #509498;
       border: 1px solid #509498;
+      scale: 1.1;
     }
   }
 }

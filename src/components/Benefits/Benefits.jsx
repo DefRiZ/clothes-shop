@@ -9,36 +9,36 @@ import responsibility from "../../img/hand.svg";
 const Benefits = () => {
   return (
     <section className={styles.root}>
-      <h2>Что для нас важно</h2>
+      <h2>Що для нас важливо</h2>
       <div className={styles.benefitsList}>
         <div className={styles.benefitsBlock}>
           <div className={styles.imgBlock}>
             <img src={quality} alt="quality" />
           </div>
-          <h3>Качество</h3>
+          <h3>Якість</h3>
           <p>
-            Наши профессионалы работают на лучшем оборудовании для пошива одежды
-            беспрецедентного качества
+            Наші професіонали працюють на кращому обладнанні для пошиття одягу
+            безпрецедентної якості
           </p>
         </div>
         <div className={styles.benefitsBlock}>
           <div className={styles.imgBlock}>
             <img src={speed} alt="speed" />
           </div>
-          <h3>Скорость</h3>
+          <h3>Швидкість</h3>
           <p>
-            Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти
-            единиц продукции в наших собственных цехах
+            Завдяки налагодженій системі у Womazing ми можемо відшивати до 20-ти
+            одиниць продукції у наших власних цехах.
           </p>
         </div>
         <div className={styles.benefitsBlock}>
           <div className={styles.imgBlock}>
             <img src={responsibility} alt="responsibility" />
           </div>
-          <h3>Ответственность</h3>
+          <h3>Відповідальність</h3>
           <p>
-            Мы заботимся о людях и планете. Безотходное производство и
-            комфортные условия труда - все это Womazing
+            Ми дбаємо про людей та планету. Безвідходне виробництво та комфортні
+            умови праці - все це Womazing
           </p>
         </div>
       </div>

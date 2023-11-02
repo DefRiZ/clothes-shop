@@ -10,7 +10,7 @@ import Cart from "./pages/Cart/Cart";
 import { Route, Routes } from "react-router";
 
 import { useSelector } from "react-redux/es/hooks/useSelector";
-import SinglePage from "./components/SinglePage/SinglePage";
+import SinglePage from "./pages/SinglePage/SinglePage";
 
 function App() {
   const { isOpenDrawer } = useSelector((state) => state.filter);

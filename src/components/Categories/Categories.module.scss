@@ -14,15 +14,18 @@
       cursor: pointer;
       padding: 19px 65px;
       border: 1px solid black;
+      transition-duration: 400ms;
       &:hover {
-        background-color: black;
-        opacity: 0.5;
-        color: white;
-      }
-      &:active {
         background-color: black;
         opacity: 0.8;
         color: white;
+        scale: 1.1;
+      }
+      &:active {
+        background-color: black;
+        opacity: 0.9;
+        color: white;
+        scale: 1;
       }
     }
     .active {

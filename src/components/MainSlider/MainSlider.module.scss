@@ -43,8 +43,14 @@
       .arrow {
         padding: 20px 26px;
         background-color: rgba($color: #6e9c9f, $alpha: 0.1);
+        svg {
+          transition-duration: 400ms;
+        }
         &:hover {
           opacity: 0.8;
+          svg {
+            scale: 1.1;
+          }
         }
         &:active {
           opacity: 0.5;
@@ -87,6 +93,11 @@
       z-index: 1;
       position: absolute;
       box-sizing: content-box;
+      cursor: pointer;
+      transition-duration: 900ms;
+      &:hover {
+        scale: 1.1;
+      }
       &:first-of-type {
         position: relative;
       }

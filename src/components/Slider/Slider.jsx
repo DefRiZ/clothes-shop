@@ -29,7 +29,7 @@ const Slider = () => {
   };
   return (
     <section className={styles.root}>
-      <h2>Команда мечты Womazing</h2>
+      <h2>Команда мрії Womazing</h2>
       <div className={styles.sliderBlock}>
         <div className={styles.imageSection}>
           <svg
@@ -79,17 +79,15 @@ const Slider = () => {
           </div>
         </div>
         <div className={styles.infoSection}>
-          <h3>Для каждой</h3>
+          <h3>Для кожної</h3>
           <p className={styles.firstParagraph}>
-            Каждая девушка уникальна. Однако, мы схожи в миллионе мелочей.
+            Кожна дівчина є унікальною. Однак, ми схожі в мільйонах дрібниць.
           </p>
           <p className={styles.secondParagraph}>
-            Womazing ищет эти мелочи и создает прекрасные вещи, которые выгодно
-            подчеркивают достоинства каждой девушки.
+            Womazing шукає ці дрібниці та створює чудові речі, які вигідно
+            підкреслюють переваги кожної дівчини.
           </p>
-          <Link to="/about">
-            <span>Подробнее о бренде</span>
-          </Link>
+          <Link to="/about">Детальніше про бренд</Link>
         </div>
       </div>
     </section>

@@ -71,8 +71,15 @@
             border: 2px solid black;
             font-weight: 600;
             cursor: pointer;
+            transition-duration: 400ms;
             &:hover {
-              background-color: rgba($color: #000000, $alpha: 0.5);
+              background-color: rgba($color: #000000, $alpha: 0.9);
+              scale: 1.1;
+              color: white;
+            }
+            &:active {
+              scale: 1;
+              color: white;
             }
           }
         }
@@ -86,12 +93,24 @@
           border: 2px solid #afafaf;
           font-weight: 600;
           align-self: center;
+          cursor: pointer;
         }
         .button {
           color: #6e9c9f;
           display: inline-block;
           padding: 20px 50px;
           border: 1px solid #6e9c9f;
+          transition-duration: 400ms;
+          &:hover {
+            scale: 1.1;
+            background-color: #6e9c9f;
+            color: white;
+          }
+          &:active {
+            scale: 0.9;
+            background-color: #6e9c9f;
+            color: white;
+          }
         }
       }
     }

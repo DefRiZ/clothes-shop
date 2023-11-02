@@ -30,9 +30,11 @@
     &:hover {
       background-color: #6e9c9f;
       color: white;
+      scale: 1.1;
     }
     &:active {
       opacity: 0.8;
+      scale: 0.8;
     }
   }
 }

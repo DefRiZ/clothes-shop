@@ -13,6 +13,7 @@
       padding: 9px 16px;
       border: 1px solid black;
       cursor: pointer;
+      transition-duration: 400ms;
       &:first-of-type,
       &:last-of-type {
         border: none;
@@ -20,6 +21,14 @@
       &:hover {
         color: white;
         background-color: black;
+        opacity: 0.9;
+        scale: 1.1;
+      }
+      &:active {
+        background-color: black;
+        opacity: 0.9;
+        color: white;
+        scale: 1;
       }
     }
   }

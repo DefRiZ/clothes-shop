@@ -68,6 +68,10 @@
       color: white;
       background-color: #6e9c9f;
       cursor: pointer;
+      transition-duration: 400ms;
+      &:hover {
+        scale: 1.1;
+      }
     }
   }
 }

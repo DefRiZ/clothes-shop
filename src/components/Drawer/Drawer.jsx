@@ -25,7 +25,7 @@ const Drawer = () => {
               <path d="M1 1L15.5 15.5M15.5 1L1 15.5" stroke="black" />
             </svg>
 
-            <h2>Заказать обратный звонок</h2>
+            <h2>Замовити зворотній дзвінок</h2>
             <form className={styles.form}>
               <input placeholder="Имя" type="text" />
               <input placeholder="E-mail" type="email" />
@@ -35,7 +35,7 @@ const Drawer = () => {
               onClick={() => setIsCallback(true)}
               className={styles.button}
             >
-              Заказать звонок
+              Замовити дзвінок
             </button>
           </div>
         </div>
@@ -46,12 +46,12 @@ const Drawer = () => {
       <div className={styles.root}>
         <div className={styles.overlay}>
           <div className={styles.drawer}>
-            <h2>Отлично! Мы скоро вам перезвоним.</h2>
+            <h2>Чудово! Ми незабаром вам передзвонимо.</h2>
             <button
               onClick={() => dispatch(setDrawer())}
               className={styles.button}
             >
-              Закрыть
+              Закрити
             </button>
           </div>
         </div>

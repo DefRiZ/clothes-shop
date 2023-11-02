@@ -44,20 +44,20 @@ const Catalog = () => {
       <h2 className={styles.title}>Магазин</h2>
       <ul className={styles.breads}>
         <li className={styles.bread}>
-          <Link to="/">Главная</Link>
+          <Link to="/">Головна</Link>
         </li>
         <li className={styles.bread}>Магазин</li>
       </ul>
       <Categories />
       <p className={styles.list}>
-        Отображается {itemsFetch.length} из {data.length} товаров
+        Відображається {itemsFetch.length} з {data.length} товарів
       </p>
       <div className={styles.items}>
-        {status === "error" && <p>Обновите страницу</p>}
+        {status === "error" && <p>Оновіть сторінку</p>}
         {status === "complete" && itemsList}
       </div>
       <p className={styles.list}>
-        Отображается {itemsFetch.length} из {data.length} товаров
+        Відображається {itemsFetch.length} з {data.length} товарів
       </p>
       <Pagination />
     </div>

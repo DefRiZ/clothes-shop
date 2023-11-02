@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCategoryId } from "../../store/slices/filterSlice";
 import { useSearchParams } from "react-router-dom";
 
-const list = ["Все", "Пальто", "Свитшоты", "Кардиганы", "Толстовки"];
+const list = ["Все", "Пальто", "Світшоти", "Кардигани", "Толстовки"];
 
 const Categories = () => {
   const [searchParams, setSearchParams] = useSearchParams();

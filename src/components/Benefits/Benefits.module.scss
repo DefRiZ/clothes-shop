@@ -17,6 +17,11 @@
       .imgBlock {
         img {
           max-width: 100%;
+          cursor: pointer;
+          transition-duration: 400ms;
+          &:hover {
+            scale: 1.2;
+          }
         }
         @media (max-width: 1024px) {
           display: flex;

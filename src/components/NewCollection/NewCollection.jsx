@@ -51,14 +51,14 @@ const NewCollection = () => {
   ));
   return (
     <div className={styles.root}>
-      <h2 className={styles.title}>Новая коллекция</h2>
+      <h2 className={styles.title}>Нова колекція</h2>
       <div className={styles.items}>
-        {status === "error" && <h3>Обновите страницу!</h3>}
+        {status === "error" && <h3>Оновіть сторінку!</h3>}
         {status === "complete" && collectionList}
       </div>
 
       <Link className={styles.button} to="/catalog">
-        Открыть магазин
+        Відкрити магазин
       </Link>
     </div>
   );
