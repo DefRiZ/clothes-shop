@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  .root {
+    background-color: rgb(255 255 255 / 0.9);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    top: 0px;
+    left: 0px;
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20%;
+      align-items: center;
+      li {
+        margin-top: 20px;
+        .link {
+          font-size: 3rem;
+          line-height: 3.6rem;
+        }
+        .fav {
+          display: flex;
+          margin-left: 45px;
+          padding-right: 33px;
+          &:hover {
+            opacity: 80%;
+          }
+          span {
+            width: 19px;
+            height: 19px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #7db54f;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+            top: -5px;
+            left: -5px;
+          }
+        }
+      }
+    }
+  }
+}

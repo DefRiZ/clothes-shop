@@ -13,11 +13,18 @@
   .topSection {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
+    }
     nav {
       .nav {
         display: flex;
         justify-content: space-between;
         width: 400px;
+        @media (max-width: 980px) {
+          display: none;
+        }
         li {
           transition-duration: 400ms;
         }
@@ -48,7 +55,10 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
-
+    @media (max-width: 500px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
     .license {
       display: flex;
       flex-direction: column;

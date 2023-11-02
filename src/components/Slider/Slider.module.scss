@@ -5,6 +5,9 @@
     font-weight: 500;
     font-size: 25px;
     margin-bottom: 90px;
+    @media (max-width: 1100px) {
+      text-align: center;
+    }
   }
   .sliderBlock {
     display: grid;

@@ -6,6 +6,7 @@ const filterSlice = createSlice({
     categoryId: 0,
     currentPage: 1,
     isOpenDrawer: false,
+    isOpenBurger: false,
   },
   reducers: {
     setCategoryId(state, action) {
@@ -17,9 +18,13 @@ const filterSlice = createSlice({
     setDrawer(state) {
       state.isOpenDrawer = !state.isOpenDrawer;
     },
+    setBurger(state) {
+      state.isOpenBurger = !state.isOpenBurger;
+    },
   },
 });
 
-export const { setCategoryId, setCurrentPage, setDrawer } = filterSlice.actions;
+export const { setCategoryId, setCurrentPage, setDrawer, setBurger } =
+  filterSlice.actions;
 
 export default filterSlice.reducer;

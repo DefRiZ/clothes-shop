@@ -3,9 +3,15 @@
   justify-content: space-between;
   position: relative;
   z-index: 1;
-
   @media (max-width: 1024px) {
     padding: 0 40px;
+  }
+  @media (max-width: 980px) {
+    justify-content: flex-start;
+  }
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -14,6 +20,9 @@ nav {
     width: 400px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 980px) {
+      display: none;
+    }
     li {
       font-size: 15px;
       transition-duration: 200ms;
@@ -25,10 +34,53 @@ nav {
   }
 }
 
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  position: relative;
+  span {
+    display: inline-block;
+    height: 2px;
+    width: 80%;
+    background-color: #c4c4c4;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 27px;
+    background-color: #c4c4c4;
+  }
+  &::before {
+    top: 0px;
+  }
+
+  &::after {
+    bottom: 0px;
+  }
+  @media (max-width: 980px) {
+    display: flex;
+    margin-left: auto;
+    margin-right: 100px;
+    align-self: center;
+  }
+  @media (max-width: 500px) {
+    margin: 30px auto;
+  }
+}
+
 .userMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 
   .number {
     margin-left: 10px;
@@ -38,6 +90,9 @@ nav {
     &:hover {
       color: #6e9c9f;
     }
+    @media (max-width: 980px) {
+      display: none;
+    }
   }
   .phone {
     padding: 6px;
@@ -45,6 +100,13 @@ nav {
     height: 27px;
     cursor: pointer;
     transition-duration: 400ms;
+    @media (max-width: 980px) {
+      margin-right: 100px;
+    }
+    @media (max-width: 500px) {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
     &:hover {
       background-color: #6e9c9f;
       scale: 1.1;

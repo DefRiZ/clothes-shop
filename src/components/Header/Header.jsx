@@ -7,11 +7,13 @@ import cart from "../../img/shop-bag.svg";
 
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setDrawer } from "../../store/slices/filterSlice";
+import { setDrawer, setBurger } from "../../store/slices/filterSlice";
+import BurgerDrawer from "../BurgerDrawer/BurgerDrawer";
 
 const Header = () => {
   const dispatch = useDispatch();
   const { totalCount } = useSelector((state) => state.cart);
+  const { isOpenBurger } = useSelector((state) => state.filter);
   return (
     <div className={styles.root}>
       <div className={styles.logoDiv}>
@@ -35,6 +37,10 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <div onClick={() => dispatch(setBurger())} className={styles.burger}>
+        <span></span>
+      </div>
+      {isOpenBurger && <BurgerDrawer />}
       <div className={styles.userMenu}>
         <svg
           className={styles.phone}

@@ -1,6 +1,9 @@
 .root {
   text-align: left;
   margin-bottom: 130px;
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
   h2 {
     font-weight: 500;
     font-size: 25px;
