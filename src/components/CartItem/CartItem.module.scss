@@ -7,13 +7,23 @@
   text-align: left;
   font-weight: 500;
   font-size: 15px;
+  @media (max-width: 680px) {
+    display: flex;
+    flex-direction: column;
+  }
   .info {
     display: flex;
     align-items: center;
+    @media (max-width: 680px) {
+      flex-direction: column;
+    }
     .image {
       max-width: 137px;
       max-height: 170px;
       margin: auto 36px;
+      @media (max-width: 680px) {
+        margin: 20px auto;
+      }
     }
     .delete {
       cursor: pointer;
@@ -26,5 +36,8 @@
     width: 50px;
     padding: 10px 20px;
     border: 1px solid #afafaf;
+    @media (max-width: 680px) {
+      margin: 20px auto;
+    }
   }
 }

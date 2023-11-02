@@ -43,9 +43,9 @@
       grid-template-columns: repeat(1, 1fr);
     }
     .imageBlock {
-      img {
-        width: 536px;
-        height: 729px;
+      margin-right: auto;
+      @media (max-width: 1000px) {
+        margin-right: 0;
       }
     }
     .info {
