@@ -5,13 +5,19 @@ import styles from "./Benefits.module.scss";
 import quality from "../../img/quality.svg";
 import speed from "../../img/speed.svg";
 import responsibility from "../../img/hand.svg";
+import { motion } from "framer-motion";
 
 const Benefits = () => {
   return (
     <section className={styles.root}>
       <h2>Що для нас важливо</h2>
       <div className={styles.benefitsList}>
-        <div className={styles.benefitsBlock}>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={styles.benefitsBlock}
+        >
           <div className={styles.imgBlock}>
             <img src={quality} alt="quality" />
           </div>
@@ -20,8 +26,13 @@ const Benefits = () => {
             Наші професіонали працюють на кращому обладнанні для пошиття одягу
             безпрецедентної якості
           </p>
-        </div>
-        <div className={styles.benefitsBlock}>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={styles.benefitsBlock}
+        >
           <div className={styles.imgBlock}>
             <img src={speed} alt="speed" />
           </div>
@@ -30,8 +41,13 @@ const Benefits = () => {
             Завдяки налагодженій системі у Womazing ми можемо відшивати до 20-ти
             одиниць продукції у наших власних цехах.
           </p>
-        </div>
-        <div className={styles.benefitsBlock}>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className={styles.benefitsBlock}
+        >
           <div className={styles.imgBlock}>
             <img src={responsibility} alt="responsibility" />
           </div>
@@ -40,7 +56,7 @@ const Benefits = () => {
             Ми дбаємо про людей та планету. Безвідходне виробництво та комфортні
             умови праці - все це Womazing
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

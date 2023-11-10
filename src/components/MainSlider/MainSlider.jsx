@@ -9,6 +9,7 @@ import activeRec from "../../img/MainSlider/active.svg";
 import rectangle from "../../img/slider/rectangle.svg";
 
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const textList = [
   {
@@ -81,9 +82,27 @@ const MainSlider = () => {
         </div>
       </div>
       <div className={styles.gallery}>
-        <img src={main} alt="main" />
-        <img src={second} alt="second" />
-        <img src={third} alt="third" />
+        <motion.img
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "linear" }}
+          src={main}
+          alt="main"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "linear" }}
+          src={second}
+          alt="second"
+        />
+        <motion.img
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ ease: "linear" }}
+          src={third}
+          alt="third"
+        />
         {/* <div className={styles.bg}></div> */}
       </div>
     </div>
