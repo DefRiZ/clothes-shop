@@ -1,10 +1,9 @@
 import React from "react";
-
-import styles from "./Categories.module.scss";
-
 import { useSelector, useDispatch } from "react-redux";
 import { setCategoryId } from "../../store/slices/filterSlice";
 import { useSearchParams } from "react-router-dom";
+
+import styles from "./Categories.module.scss";
 
 const list = ["Все", "Пальто", "Світшоти", "Кардигани", "Толстовки"];
 

@@ -1,13 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./SingleProduct.module.scss";
-
-import { Link } from "react-router-dom";
 
 const SingleProduct = ({ id, imageUrl, title, price }) => {
   return (
     <div className={styles.item}>
-      <Link to={`items/${id}`}>
+      <Link to={`/catalog/items/${id}`}>
         <div className={styles.wrapper}>
           <img className={styles.image} src={imageUrl} alt="product" />
         </div>

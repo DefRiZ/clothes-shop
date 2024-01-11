@@ -1,10 +1,10 @@
 import React from "react";
 
-import styles from "./BurgerDrawer.module.scss";
-
 import { Link } from "react-router-dom";
 import { setBurger } from "../../store/slices/filterSlice";
 import { useDispatch } from "react-redux";
+
+import styles from "./BurgerDrawer.module.scss";
 
 const BurgerDrawer = () => {
   const dispatch = useDispatch();

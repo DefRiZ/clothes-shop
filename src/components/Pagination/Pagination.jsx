@@ -1,13 +1,12 @@
 import React from "react";
-
-import styles from "./Pagination.module.scss";
-
-import ReactPaginate from "react-paginate";
-
 import axios from "axios";
 
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentPage } from "../../store/slices/filterSlice";
+
+import styles from "./Pagination.module.scss";
+
+import ReactPaginate from "react-paginate";
 
 const Pagination = () => {
   const [data, setData] = React.useState([]);

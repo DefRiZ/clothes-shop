@@ -1,11 +1,11 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import styles from "./Benefits.module.scss";
 
 import quality from "../../img/quality.svg";
 import speed from "../../img/speed.svg";
 import responsibility from "../../img/hand.svg";
-import { motion } from "framer-motion";
 
 const Benefits = () => {
   return (

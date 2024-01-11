@@ -1,12 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchItems } from "../../store/slices/itemsSlice";
 
 import styles from "./NewCollection.module.scss";
 
 import SingleProduct from "../SingleProduct/SingleProduct";
-
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchItems } from "../../store/slices/itemsSlice";
 
 const NewCollection = () => {
   const dispatch = useDispatch();

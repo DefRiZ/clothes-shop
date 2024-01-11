@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import styles from "./MainSlider.module.scss";
 
@@ -7,9 +9,6 @@ import second from "../../img/MainSlider/second.jpg";
 import third from "../../img/MainSlider/third.jpg";
 import activeRec from "../../img/MainSlider/active.svg";
 import rectangle from "../../img/slider/rectangle.svg";
-
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const textList = [
   {
