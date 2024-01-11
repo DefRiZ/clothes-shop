@@ -1,8 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./SingleProduct.module.scss";
-
-import { Link } from "react-router-dom";
 
 const SingleProduct = ({ id, imageUrl, title, price }) => {
   return (

@@ -27,38 +27,6 @@
         }
       }
 
-      .leftArrow {
-        position: absolute;
-        right: 103%;
-        top: 50%;
-        cursor: pointer;
-        transition-duration: 400ms;
-        &:hover {
-          scale: 1.1;
-        }
-        &:active {
-          scale: 0.8;
-        }
-        @media (max-width: 1140x) {
-          display: none;
-        }
-      }
-      .rigthArrow {
-        position: absolute;
-        left: 103%;
-        top: 50%;
-        cursor: pointer;
-        transition-duration: 400ms;
-        &:hover {
-          scale: 1.1;
-        }
-        &:active {
-          scale: 0.8;
-        }
-        @media (max-width: 1140px) {
-          display: none;
-        }
-      }
       .rectangleBlock {
         display: flex;
         width: 110px;

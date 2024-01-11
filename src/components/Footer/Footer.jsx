@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Footer.module.scss";
 
@@ -7,8 +8,6 @@ import inst from "../../img/social/instagram.svg";
 import facebook from "../../img/social/facebook.svg";
 import twit from "../../img/social/twitter.svg";
 import cards from "../../img/social/visa-mastercard.png";
-
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (

@@ -1,0 +1,104 @@
+.container {
+  width: 729px;
+  height: 488px;
+  margin: 0 auto;
+  @media (max-width: 810px) {
+    width: 409px;
+    height: 350px;
+    .image {
+      width: 300px;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 540px) {
+    width: 309px;
+  }
+  @media (max-width: 420px) {
+    width: 200px;
+    height: 210px;
+    .image {
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+}
+.slick-prev {
+  left: -45px;
+  @media (max-width: 420px) {
+    left: -25px;
+  }
+  &::before {
+    display: none;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.slick-next {
+  right: -45px;
+  @media (max-width: 420px) {
+    right: -25px;
+  }
+  &::before {
+    display: none;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    scale: 0.9;
+  }
+}
+
+.dots {
+  display: flex !important;
+  width: 110px;
+  justify-content: space-between;
+  position: absolute;
+  top: 80%;
+  left: 41%;
+  @media (max-width: 540px) {
+    left: 35%;
+  }
+  @media (max-width: 420px) {
+    left: 20%;
+  }
+  .rectangle {
+    cursor: pointer;
+  }
+}
+
+.slick-active {
+  button::before {
+    z-index: 2;
+    content: url("/img/slider/active-rectangle.svg");
+    display: block;
+    width: 30px;
+    height: 4px;
+    color: white;
+  }
+  button {
+    color: transparent;
+  }
+}
+
+li {
+  button::before {
+    z-index: 2;
+    content: url("/img/slider/rectangle.svg");
+    display: block;
+    width: 30px;
+    height: 4px;
+    color: white;
+  }
+  button {
+    color: transparent;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
