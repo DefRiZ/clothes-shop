@@ -15,15 +15,15 @@ const Cart = () => {
         <h2 className={styles.title}>Корзина</h2>
         <ul className={styles.breads}>
           <li className={styles.bread}>
-            <Link to="/">Главная</Link>
+            <Link to="/">Головна</Link>
           </li>
           <li className={styles.bread}>Корзина</li>
         </ul>
         <div className={styles.empty}>
-          <h3 className={styles.title}>У вас нет добавленных товаров</h3>
+          <h3 className={styles.title}>Ваша корзина пуста</h3>
           <div className={styles.block}>
             <Link className={styles.button} to="/catalog">
-              Вернуться в магазин
+              Повернутись до магазину
             </Link>
           </div>
         </div>
